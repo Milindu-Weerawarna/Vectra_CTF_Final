@@ -1,0 +1,7 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 16:56:24 2026 as: nmap -Pn -sS -T3 --top-ports 1000 -oA initial 157.230.248.66
+Nmap scan report for 157.230.248.66
+Host is up (0.011s latency).
+All 1000 scanned ports on 157.230.248.66 are in ignored states.
+Not shown: 789 filtered tcp ports (no-response), 211 filtered tcp ports (net-unreach)
+
+# Nmap done at Sat Aug 15 16:57:53 2026 -- 1 IP address (1 host up) scanned in 89.39 seconds
