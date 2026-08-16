@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 16:14:56 2026 as: nmap -Pn -sC -sV -T3 -p22,25,80,8080,8888 -oA services 159.223.40.205
+Host: 159.223.40.205 ()	Status: Up
+Host: 159.223.40.205 ()	Ports: 22/open/tcp//ssh//OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)/, 25/open/tcp//smtp?///, 80/open/tcp//http//nginx/, 8080/open/tcp//http-proxy//Werkzeug|3.1.3 Python|3.13.5/, 8888/open/tcp//http//Tornado httpd 6.4.2/
+# Nmap done at Sat Aug 15 16:17:28 2026 -- 1 IP address (1 host up) scanned in 152.36 seconds
