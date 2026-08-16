@@ -1,0 +1,123 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 15:13:36 2026 as: nmap -Pn -sC -sV -T3 -p22,25,3000,8888 --reason -oA argus-services 159.223.68.133
+Nmap scan report for 159.223.68.133
+Host is up, received user-set (0.026s latency).
+
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 64 OpenSSH 8.9p1 Ubuntu 3ubuntu0.16 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 07:86:d1:0a:c1:fa:76:a0:52:58:37:97:1d:d8:04:83 (ECDSA)
+|_  256 3b:61:2f:69:7e:79:e9:6d:2a:81:10:1f:a7:1d:5c:4d (ED25519)
+25/tcp   open  smtp?   syn-ack ttl 64
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, ms-sql-s, oracle-tns: 
+|     500 Syntax error, command unrecognized
+|   Hello: 
+|_    552 Invalid domain name in EHLO command.
+|_smtp-commands: Couldn't establish connection on port 25
+3000/tcp open  ppp?    syn-ack ttl 64
+| fingerprint-strings: 
+|   GenericLines, Help: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Cache-Control: no-cache
+|     Content-Type: text/html; charset=UTF-8
+|     Expires: -1
+|     Pragma: no-cache
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: deny
+|     X-Xss-Protection: 1; mode=block
+|     Date: Sat, 15 Aug 2026 09:43:55 GMT
+|     <!doctype html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta name="viewport" content="width=device-width"/><meta name="theme-color" content="#000"/><title>Grafana</title><base href="/"/><link rel="preload" href="public/fonts/roboto/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2" as="font" crossorigin/><link rel="icon" type="image/png" href="public/img/fav32.png"/><link rel="apple-touch-icon" sizes="180x180" href="public/img/apple-touch-icon.png"/><link rel="mask-icon" href="public/img/grafana_mask_icon.svg" color="#F05A28"/><link rel="stylesheet" href="public/build/grafana.dark.fab
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Cache-Control: no-cache
+|     Content-Type: text/html; charset=UTF-8
+|     Expires: -1
+|     Pragma: no-cache
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: deny
+|     X-Xss-Protection: 1; mode=block
+|     Date: Sat, 15 Aug 2026 09:44:00 GMT
+|_    <!doctype html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta name="viewport" content="width=device-width"/><meta name="theme-color" content="#000"/><title>Grafana</title><base href="/"/><link rel="preload" href="public/fonts/roboto/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2" as="font" crossorigin/><link rel="icon" type="image/png" href="public/img/fav32.png"/><link rel="apple-touch-icon" sizes="180x180" href="public/img/apple-touch-icon.png"/><link rel="mask-icon" href="public/img/grafana_mask_icon.svg" color="#F05A28"/><link rel="stylesheet" href="public/build/grafana.d
+8888/tcp open  http    syn-ack ttl 64 Tornado httpd 6.5.8
+|_http-server-header: TornadoServer/6.5.8
+| http-title: Home
+|_Requested resource was /tree?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port25-TCP:V=7.94SVN%I=7%D=8/15%Time=6A8034DA%P=x86_64-pc-linux-gnu%r(H
+SF:ello,2A,"552\x20Invalid\x20domain\x20name\x20in\x20EHLO\x20command\.\r\
+SF:n")%r(GenericLines,28,"500\x20Syntax\x20error,\x20command\x20unrecogniz
+SF:ed\r\n")%r(GetRequest,28,"500\x20Syntax\x20error,\x20command\x20unrecog
+SF:nized\r\n")%r(HTTPOptions,28,"500\x20Syntax\x20error,\x20command\x20unr
+SF:ecognized\r\n")%r(RTSPRequest,28,"500\x20Syntax\x20error,\x20command\x2
+SF:0unrecognized\r\n")%r(RPCCheck,28,"500\x20Syntax\x20error,\x20command\x
+SF:20unrecognized\r\n")%r(DNSVersionBindReqTCP,28,"500\x20Syntax\x20error,
+SF:\x20command\x20unrecognized\r\n")%r(DNSStatusRequestTCP,28,"500\x20Synt
+SF:ax\x20error,\x20command\x20unrecognized\r\n")%r(SSLSessionReq,28,"500\x
+SF:20Syntax\x20error,\x20command\x20unrecognized\r\n")%r(TerminalServerCoo
+SF:kie,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\n")%r(TLSS
+SF:essionReq,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\n")%
+SF:r(Kerberos,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\n")
+SF:%r(SMBProgNeg,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\
+SF:n")%r(X11Probe,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r
+SF:\n")%r(FourOhFourRequest,28,"500\x20Syntax\x20error,\x20command\x20unre
+SF:cognized\r\n")%r(LPDString,28,"500\x20Syntax\x20error,\x20command\x20un
+SF:recognized\r\n")%r(LDAPSearchReq,28,"500\x20Syntax\x20error,\x20command
+SF:\x20unrecognized\r\n")%r(LDAPBindReq,28,"500\x20Syntax\x20error,\x20com
+SF:mand\x20unrecognized\r\n")%r(SIPOptions,28,"500\x20Syntax\x20error,\x20
+SF:command\x20unrecognized\r\n")%r(LANDesk-RC,28,"500\x20Syntax\x20error,\
+SF:x20command\x20unrecognized\r\n")%r(TerminalServer,28,"500\x20Syntax\x20
+SF:error,\x20command\x20unrecognized\r\n")%r(NCP,28,"500\x20Syntax\x20erro
+SF:r,\x20command\x20unrecognized\r\n")%r(NotesRPC,28,"500\x20Syntax\x20err
+SF:or,\x20command\x20unrecognized\r\n")%r(JavaRMI,28,"500\x20Syntax\x20err
+SF:or,\x20command\x20unrecognized\r\n")%r(WMSRequest,28,"500\x20Syntax\x20
+SF:error,\x20command\x20unrecognized\r\n")%r(oracle-tns,28,"500\x20Syntax\
+SF:x20error,\x20command\x20unrecognized\r\n")%r(ms-sql-s,28,"500\x20Syntax
+SF:\x20error,\x20command\x20unrecognized\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3000-TCP:V=7.94SVN%I=7%D=8/15%Time=6A8034DA%P=x86_64-pc-linux-gnu%r
+SF:(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x
+SF:20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Ba
+SF:d\x20Request")%r(GetRequest,36D0,"HTTP/1\.0\x20200\x20OK\r\nCache-Contr
+SF:ol:\x20no-cache\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nExpi
+SF:res:\x20-1\r\nPragma:\x20no-cache\r\nX-Content-Type-Options:\x20nosniff
+SF:\r\nX-Frame-Options:\x20deny\r\nX-Xss-Protection:\x201;\x20mode=block\r
+SF:\nDate:\x20Sat,\x2015\x20Aug\x202026\x2009:43:55\x20GMT\r\n\r\n<!doctyp
+SF:e\x20html><html\x20lang=\"en\"><head><meta\x20charset=\"utf-8\"/><meta\
+SF:x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge,chrome=1\"/><met
+SF:a\x20name=\"viewport\"\x20content=\"width=device-width\"/><meta\x20name
+SF:=\"theme-color\"\x20content=\"#000\"/><title>Grafana</title><base\x20hr
+SF:ef=\"/\"/><link\x20rel=\"preload\"\x20href=\"public/fonts/roboto/RxZJdn
+SF:zeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw\.woff2\"\x20as=\"font\"\x20crosso
+SF:rigin/><link\x20rel=\"icon\"\x20type=\"image/png\"\x20href=\"public/img
+SF:/fav32\.png\"/><link\x20rel=\"apple-touch-icon\"\x20sizes=\"180x180\"\x
+SF:20href=\"public/img/apple-touch-icon\.png\"/><link\x20rel=\"mask-icon\"
+SF:\x20href=\"public/img/grafana_mask_icon\.svg\"\x20color=\"#F05A28\"/><l
+SF:ink\x20rel=\"stylesheet\"\x20href=\"public/build/grafana\.dark\.fab")%r
+SF:(Help,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/p
+SF:lain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Req
+SF:uest")%r(HTTPOptions,36D0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nCache-Co
+SF:ntrol:\x20no-cache\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nE
+SF:xpires:\x20-1\r\nPragma:\x20no-cache\r\nX-Content-Type-Options:\x20nosn
+SF:iff\r\nX-Frame-Options:\x20deny\r\nX-Xss-Protection:\x201;\x20mode=bloc
+SF:k\r\nDate:\x20Sat,\x2015\x20Aug\x202026\x2009:44:00\x20GMT\r\n\r\n<!doc
+SF:type\x20html><html\x20lang=\"en\"><head><meta\x20charset=\"utf-8\"/><me
+SF:ta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge,chrome=1\"/><
+SF:meta\x20name=\"viewport\"\x20content=\"width=device-width\"/><meta\x20n
+SF:ame=\"theme-color\"\x20content=\"#000\"/><title>Grafana</title><base\x2
+SF:0href=\"/\"/><link\x20rel=\"preload\"\x20href=\"public/fonts/roboto/RxZ
+SF:Jdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw\.woff2\"\x20as=\"font\"\x20cro
+SF:ssorigin/><link\x20rel=\"icon\"\x20type=\"image/png\"\x20href=\"public/
+SF:img/fav32\.png\"/><link\x20rel=\"apple-touch-icon\"\x20sizes=\"180x180\
+SF:"\x20href=\"public/img/apple-touch-icon\.png\"/><link\x20rel=\"mask-ico
+SF:n\"\x20href=\"public/img/grafana_mask_icon\.svg\"\x20color=\"#F05A28\"/
+SF:><link\x20rel=\"stylesheet\"\x20href=\"public/build/grafana\.d");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 15 15:15:58 2026 -- 1 IP address (1 host up) scanned in 141.93 seconds
