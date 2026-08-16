@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 15:13:36 2026 as: nmap -Pn -sC -sV -T3 -p22,25,3000,8888 --reason -oA argus-services 159.223.68.133
+Host: 159.223.68.133 ()	Status: Up
+Host: 159.223.68.133 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.9p1 Ubuntu 3ubuntu0.16 (Ubuntu Linux; protocol 2.0)/, 25/open/tcp//smtp?///, 3000/open/tcp//ppp?///, 8888/open/tcp//http//Tornado httpd 6.5.8/
+# Nmap done at Sat Aug 15 15:15:58 2026 -- 1 IP address (1 host up) scanned in 141.93 seconds
