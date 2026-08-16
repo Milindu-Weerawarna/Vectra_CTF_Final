@@ -1,0 +1,7 @@
+# Never publish local private keys.
+*.pem
+
+# Python-generated files.
+__pycache__/
+*.py[cod]
+
