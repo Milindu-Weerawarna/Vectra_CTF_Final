@@ -1,0 +1,20 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 14:26:11 2026 as: nmap -sT -T4 --top-ports 1000 --min-rate 2000 -oN /home/kali/Documents/koth_nmap_fast.txt 165.22.240.91
+Nmap scan report for 165.22.240.91
+Host is up (0.038s latency).
+Not shown: 987 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+25/tcp   open  smtp
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2000/tcp open  cisco-sccp
+2049/tcp open  nfs
+3000/tcp open  ppp
+3306/tcp open  mysql
+5060/tcp open  sip
+8080/tcp open  http-proxy
+
+# Nmap done at Sat Aug 15 14:26:23 2026 -- 1 IP address (1 host up) scanned in 12.28 seconds

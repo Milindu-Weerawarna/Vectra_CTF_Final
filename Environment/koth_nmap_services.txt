@@ -1,0 +1,215 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 14:26:33 2026 as: nmap -sV -sC -p 21,22,25,80,111,139,445,2000,2049,3000,3306,5060,8080 -T4 -oN /home/kali/Documents/koth_nmap_services.txt 165.22.240.91
+Nmap scan report for 165.22.240.91
+Host is up (0.054s latency).
+
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         ProFTPD 1.3.3c
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 222.165.140.122
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 13
+|      vsFTPd 3.0.5 - secure, fast, stable
+|_End of status
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--    1 ftp      ftp            16 Aug 14 07:26 VERSION
+| -rw-r--r--    1 ftp      ftp            67 Aug 14 07:26 admin-console.php
+| -rw-r--r--    1 ftp      ftp          3701 Aug 14 07:26 index.php
+| -rw-r--r--    1 ftp      ftp           125 Aug 14 07:26 robots.txt
+|_drwxrwxrwx    2 ftp      ftp          4096 Aug 15 08:57 uploads [NSE: writeable]
+22/tcp   open  ssh         OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)
+25/tcp   open  smtp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, ms-sql-s, oracle-tns: 
+|     500 Syntax error, command unrecognized
+|   Hello: 
+|_    552 Invalid domain name in EHLO command.
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp   open  http        nginx
+| http-robots.txt: 5 disallowed entries 
+| /admin-console/ /backup/ /.git/ /phpmyadmin/ 
+|_/server-status/
+|_http-title: Nexus Technologies \xE2\x80\x94 Portfolio
+111/tcp  open  rpcbind     2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      43362/udp6  mountd
+|   100005  1,2,3      47111/tcp6  mountd
+|   100005  1,2,3      48866/udp   mountd
+|   100005  1,2,3      52093/tcp   mountd
+|   100021  1,3,4      42643/tcp6  nlockmgr
+|   100021  1,3,4      43387/tcp   nlockmgr
+|   100021  1,3,4      44659/udp   nlockmgr
+|   100021  1,3,4      58065/udp6  nlockmgr
+|   100024  1          44919/udp   status
+|   100024  1          44956/udp6  status
+|   100024  1          57979/tcp   status
+|   100024  1          60615/tcp6  status
+|   100227  3           2049/tcp   nfs_acl
+|_  100227  3           2049/tcp6  nfs_acl
+139/tcp  open  netbios-ssn Samba smbd 4.6.2
+445/tcp  open  netbios-ssn Samba smbd 4.6.2
+2000/tcp open  cisco-sccp?
+2049/tcp open  nfs_acl     3 (RPC #100227)
+3000/tcp open  ppp?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: Werkzeug/3.1.3 Python/3.13.5
+|     Date: Sat, 15 Aug 2026 08:56:51 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 3073
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en"><head><meta charset="UTF-8">
+|     <title>Nexus Client Portal &mdash; Home</title>
+|     <style>*{box-sizing:border-box;margin:0;padding:0}
+|     body{background:#f5f7fa;font-family:'Segoe UI',system-ui,sans-serif;color:#1a1a2e;font-size:14px}
+|     header{background:#0f2d4a;padding:16px 40px;display:flex;align-items:center;justify-content:space-between}
+|     .brand{color:#fff;font-size:17px;font-weight:700;letter-spacing:2px}
+|     .brand span{color:#4db8ff}
+|     a{color:#7fb3d4;text-decoration:none;margin-left:20px;font-size:13px}
+|     a:hover{color:#fff}
+|     .container{max-width:880px;margin:40px auto;padding:0 20px}
+|     h2{font-size:15px;color:#0f2d4a;margin-bottom:18px;font-weight:700;letter-spacing:.5px;
+|     text-transform:
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Server: Werkzeug/3.1.3 Python/3.13.5
+|     Date: Sat, 15 Aug 2026 08:56:57 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Allow: OPTIONS, HEAD, GET
+|     Content-Length: 0
+|     Connection: close
+|   Help: 
+|     <!DOCTYPE HTML>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 400</p>
+|     <p>Message: Bad request syntax ('HELP').</p>
+|     <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <!DOCTYPE HTML>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 400</p>
+|     <p>Message: Bad request version ('RTSP/1.0').</p>
+|     <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>
+|     </body>
+|_    </html>
+3306/tcp open  mysql       MySQL (blocked - too many connection errors)
+5060/tcp open  sip?
+8080/tcp open  http        nginx
+|_http-title: NexusDocs \xE2\x80\x94 Document Hub
+| http-robots.txt: 5 disallowed entries 
+| /admin-console/ /backup/ /.git/ /phpmyadmin/ 
+|_/server-status/
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port25-TCP:V=7.94SVN%I=7%D=8/15%Time=6A8029D2%P=x86_64-pc-linux-gnu%r(H
+SF:ello,2A,"552\x20Invalid\x20domain\x20name\x20in\x20EHLO\x20command\.\r\
+SF:n")%r(GenericLines,28,"500\x20Syntax\x20error,\x20command\x20unrecogniz
+SF:ed\r\n")%r(GetRequest,28,"500\x20Syntax\x20error,\x20command\x20unrecog
+SF:nized\r\n")%r(HTTPOptions,28,"500\x20Syntax\x20error,\x20command\x20unr
+SF:ecognized\r\n")%r(RTSPRequest,28,"500\x20Syntax\x20error,\x20command\x2
+SF:0unrecognized\r\n")%r(RPCCheck,28,"500\x20Syntax\x20error,\x20command\x
+SF:20unrecognized\r\n")%r(DNSVersionBindReqTCP,28,"500\x20Syntax\x20error,
+SF:\x20command\x20unrecognized\r\n")%r(DNSStatusRequestTCP,28,"500\x20Synt
+SF:ax\x20error,\x20command\x20unrecognized\r\n")%r(SSLSessionReq,28,"500\x
+SF:20Syntax\x20error,\x20command\x20unrecognized\r\n")%r(TerminalServerCoo
+SF:kie,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\n")%r(TLSS
+SF:essionReq,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\n")%
+SF:r(Kerberos,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\n")
+SF:%r(SMBProgNeg,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\
+SF:n")%r(X11Probe,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r
+SF:\n")%r(FourOhFourRequest,28,"500\x20Syntax\x20error,\x20command\x20unre
+SF:cognized\r\n")%r(LPDString,28,"500\x20Syntax\x20error,\x20command\x20un
+SF:recognized\r\n")%r(LDAPSearchReq,28,"500\x20Syntax\x20error,\x20command
+SF:\x20unrecognized\r\n")%r(LDAPBindReq,28,"500\x20Syntax\x20error,\x20com
+SF:mand\x20unrecognized\r\n")%r(SIPOptions,28,"500\x20Syntax\x20error,\x20
+SF:command\x20unrecognized\r\n")%r(LANDesk-RC,28,"500\x20Syntax\x20error,\
+SF:x20command\x20unrecognized\r\n")%r(TerminalServer,28,"500\x20Syntax\x20
+SF:error,\x20command\x20unrecognized\r\n")%r(NCP,28,"500\x20Syntax\x20erro
+SF:r,\x20command\x20unrecognized\r\n")%r(NotesRPC,28,"500\x20Syntax\x20err
+SF:or,\x20command\x20unrecognized\r\n")%r(JavaRMI,28,"500\x20Syntax\x20err
+SF:or,\x20command\x20unrecognized\r\n")%r(WMSRequest,28,"500\x20Syntax\x20
+SF:error,\x20command\x20unrecognized\r\n")%r(oracle-tns,28,"500\x20Syntax\
+SF:x20error,\x20command\x20unrecognized\r\n")%r(ms-sql-s,28,"500\x20Syntax
+SF:\x20error,\x20command\x20unrecognized\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3000-TCP:V=7.94SVN%I=7%D=8/15%Time=6A8029D2%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,CB0,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20Werkzeug/3\.1\.3\
+SF:x20Python/3\.13\.5\r\nDate:\x20Sat,\x2015\x20Aug\x202026\x2008:56:51\x2
+SF:0GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:
+SF:\x203073\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20la
+SF:ng=\"en\"><head><meta\x20charset=\"UTF-8\">\n<title>Nexus\x20Client\x20
+SF:Portal\x20&mdash;\x20Home</title>\n<style>\*{box-sizing:border-box;marg
+SF:in:0;padding:0}\nbody{background:#f5f7fa;font-family:'Segoe\x20UI',syst
+SF:em-ui,sans-serif;color:#1a1a2e;font-size:14px}\nheader{background:#0f2d
+SF:4a;padding:16px\x2040px;display:flex;align-items:center;justify-content
+SF::space-between}\n\.brand{color:#fff;font-size:17px;font-weight:700;lett
+SF:er-spacing:2px}\n\.brand\x20span{color:#4db8ff}\nnav\x20a{color:#7fb3d4
+SF:;text-decoration:none;margin-left:20px;font-size:13px}\nnav\x20a:hover{
+SF:color:#fff}\n\.container{max-width:880px;margin:40px\x20auto;padding:0\
+SF:x2020px}\nh2{font-size:15px;color:#0f2d4a;margin-bottom:18px;font-weigh
+SF:t:700;letter-spacing:\.5px;\n\x20\x20\x20text-transform:")%r(Help,167,"
+SF:<!DOCTYPE\x20HTML>\n<html\x20lang=\"en\">\n\x20\x20\x20\x20<head>\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20<title>Error\x20response</title>\n\x20\x20\x20\x20</h
+SF:ead>\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20<h1>Error
+SF:\x20response</h1>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Error\x20code:\x2
+SF:0400</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Message:\x20Bad\x20request
+SF:\x20syntax\x20\('HELP'\)\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Erro
+SF:r\x20code\x20explanation:\x20400\x20-\x20Bad\x20request\x20syntax\x20or
+SF:\x20unsupported\x20method\.</p>\n\x20\x20\x20\x20</body>\n</html>\n")%r
+SF:(HTTPOptions,C7,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20Werkzeug/3\.1\.3\
+SF:x20Python/3\.13\.5\r\nDate:\x20Sat,\x2015\x20Aug\x202026\x2008:56:57\x2
+SF:0GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nAllow:\x20OPTIO
+SF:NS,\x20HEAD,\x20GET\r\nContent-Length:\x200\r\nConnection:\x20close\r\n
+SF:\r\n")%r(RTSPRequest,16C,"<!DOCTYPE\x20HTML>\n<html\x20lang=\"en\">\n\x
+SF:20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=
+SF:\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Error\x20response</t
+SF:itle>\n\x20\x20\x20\x20</head>\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20<h1>Error\x20response</h1>\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20<p>Error\x20code:\x20400</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>
+SF:Message:\x20Bad\x20request\x20version\x20\('RTSP/1\.0'\)\.</p>\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20<p>Error\x20code\x20explanation:\x20400\x20-\x
+SF:20Bad\x20request\x20syntax\x20or\x20unsupported\x20method\.</p>\n\x20\x
+SF:20\x20\x20</body>\n</html>\n");
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: ENVIRONMENT, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb2-time: 
+|   date: 2026-08-15T08:59:29
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 15 14:30:24 2026 -- 1 IP address (1 host up) scanned in 231.54 seconds

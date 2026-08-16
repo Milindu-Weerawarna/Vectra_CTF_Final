@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 14:23:56 2026 as: nmap -Pn -p- --min-rate 5000 -T4 -oA koth-full 165.22.240.91
+Host: 165.22.240.91 ()	Status: Up
+Host: 165.22.240.91 ()	Ports: 	Ignored State: filtered (65535)
+# Nmap done at Sat Aug 15 14:24:35 2026 -- 1 IP address (1 host up) scanned in 38.93 seconds
