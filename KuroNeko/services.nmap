@@ -1,0 +1,141 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 16:14:56 2026 as: nmap -Pn -sC -sV -T3 -p22,25,80,8080,8888 -oA services 159.223.40.205
+Nmap scan report for 159.223.40.205
+Host is up (0.032s latency).
+
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)
+25/tcp   open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, ms-sql-s, oracle-tns: 
+|     500 Syntax error, command unrecognized
+|   Hello: 
+|_    552 Invalid domain name in EHLO command.
+80/tcp   open  http       nginx
+| http-git: 
+|   159.223.40.205:80/.git/
+|     Git repository found!
+|     .git/config matched patterns 'user'
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|     Last commit message: Update site theme and remove internal tooling from repo 
+|_    Project type: Python application (guessed from .gitignore)
+|_http-title: KuroNeko // \xC3\xA9\xC2\xBB\xC2\x92\xC3\xA7\xC2\x8C\xC2\xAB
+8080/tcp open  http-proxy Werkzeug/3.1.3 Python/3.13.5
+|_http-title: 404 Not Found
+|_http-server-header: Werkzeug/3.1.3 Python/3.13.5
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 404 NOT FOUND
+|     Server: Werkzeug/3.1.3 Python/3.13.5
+|     Date: Sat, 15 Aug 2026 10:45:16 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 207
+|     Connection: close
+|     <!doctype html>
+|     <html lang=en>
+|     <title>404 Not Found</title>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+|   GetRequest: 
+|     HTTP/1.1 404 NOT FOUND
+|     Server: Werkzeug/3.1.3 Python/3.13.5
+|     Date: Sat, 15 Aug 2026 10:45:15 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 207
+|     Connection: close
+|     <!doctype html>
+|     <html lang=en>
+|     <title>404 Not Found</title>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+|   RTSPRequest: 
+|     <!DOCTYPE HTML>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 400</p>
+|     <p>Message: Bad request version ('RTSP/1.0').</p>
+|     <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>
+|     </body>
+|_    </html>
+8888/tcp open  http       Tornado httpd 6.4.2
+|_http-server-header: TornadoServer/6.4.2
+| http-robots.txt: 1 disallowed entry 
+|_/ 
+| http-title: Home Page - Select or create a notebook
+|_Requested resource was /tree?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port25-TCP:V=7.94SVN%I=7%D=8/15%Time=6A80433A%P=x86_64-pc-linux-gnu%r(H
+SF:ello,2A,"552\x20Invalid\x20domain\x20name\x20in\x20EHLO\x20command\.\r\
+SF:n")%r(GenericLines,28,"500\x20Syntax\x20error,\x20command\x20unrecogniz
+SF:ed\r\n")%r(GetRequest,28,"500\x20Syntax\x20error,\x20command\x20unrecog
+SF:nized\r\n")%r(HTTPOptions,28,"500\x20Syntax\x20error,\x20command\x20unr
+SF:ecognized\r\n")%r(RTSPRequest,28,"500\x20Syntax\x20error,\x20command\x2
+SF:0unrecognized\r\n")%r(RPCCheck,28,"500\x20Syntax\x20error,\x20command\x
+SF:20unrecognized\r\n")%r(DNSVersionBindReqTCP,28,"500\x20Syntax\x20error,
+SF:\x20command\x20unrecognized\r\n")%r(DNSStatusRequestTCP,28,"500\x20Synt
+SF:ax\x20error,\x20command\x20unrecognized\r\n")%r(SSLSessionReq,28,"500\x
+SF:20Syntax\x20error,\x20command\x20unrecognized\r\n")%r(TerminalServerCoo
+SF:kie,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\n")%r(TLSS
+SF:essionReq,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\n")%
+SF:r(Kerberos,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\n")
+SF:%r(SMBProgNeg,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r\
+SF:n")%r(X11Probe,28,"500\x20Syntax\x20error,\x20command\x20unrecognized\r
+SF:\n")%r(FourOhFourRequest,28,"500\x20Syntax\x20error,\x20command\x20unre
+SF:cognized\r\n")%r(LPDString,28,"500\x20Syntax\x20error,\x20command\x20un
+SF:recognized\r\n")%r(LDAPSearchReq,28,"500\x20Syntax\x20error,\x20command
+SF:\x20unrecognized\r\n")%r(LDAPBindReq,28,"500\x20Syntax\x20error,\x20com
+SF:mand\x20unrecognized\r\n")%r(SIPOptions,28,"500\x20Syntax\x20error,\x20
+SF:command\x20unrecognized\r\n")%r(LANDesk-RC,28,"500\x20Syntax\x20error,\
+SF:x20command\x20unrecognized\r\n")%r(TerminalServer,28,"500\x20Syntax\x20
+SF:error,\x20command\x20unrecognized\r\n")%r(NCP,28,"500\x20Syntax\x20erro
+SF:r,\x20command\x20unrecognized\r\n")%r(NotesRPC,28,"500\x20Syntax\x20err
+SF:or,\x20command\x20unrecognized\r\n")%r(JavaRMI,28,"500\x20Syntax\x20err
+SF:or,\x20command\x20unrecognized\r\n")%r(WMSRequest,28,"500\x20Syntax\x20
+SF:error,\x20command\x20unrecognized\r\n")%r(oracle-tns,28,"500\x20Syntax\
+SF:x20error,\x20command\x20unrecognized\r\n")%r(ms-sql-s,28,"500\x20Syntax
+SF:\x20error,\x20command\x20unrecognized\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8080-TCP:V=7.94SVN%I=7%D=8/15%Time=6A80433B%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,184,"HTTP/1\.1\x20404\x20NOT\x20FOUND\r\nServer:\x20Werkzeu
+SF:g/3\.1\.3\x20Python/3\.13\.5\r\nDate:\x20Sat,\x2015\x20Aug\x202026\x201
+SF:0:45:15\x20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nConte
+SF:nt-Length:\x20207\r\nConnection:\x20close\r\n\r\n<!doctype\x20html>\n<h
+SF:tml\x20lang=en>\n<title>404\x20Not\x20Found</title>\n<h1>Not\x20Found</
+SF:h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20found\x20on\x20the\x20
+SF:server\.\x20If\x20you\x20entered\x20the\x20URL\x20manually\x20please\x2
+SF:0check\x20your\x20spelling\x20and\x20try\x20again\.</p>\n")%r(HTTPOptio
+SF:ns,184,"HTTP/1\.1\x20404\x20NOT\x20FOUND\r\nServer:\x20Werkzeug/3\.1\.3
+SF:\x20Python/3\.13\.5\r\nDate:\x20Sat,\x2015\x20Aug\x202026\x2010:45:16\x
+SF:20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length
+SF::\x20207\r\nConnection:\x20close\r\n\r\n<!doctype\x20html>\n<html\x20la
+SF:ng=en>\n<title>404\x20Not\x20Found</title>\n<h1>Not\x20Found</h1>\n<p>T
+SF:he\x20requested\x20URL\x20was\x20not\x20found\x20on\x20the\x20server\.\
+SF:x20If\x20you\x20entered\x20the\x20URL\x20manually\x20please\x20check\x2
+SF:0your\x20spelling\x20and\x20try\x20again\.</p>\n")%r(RTSPRequest,16C,"<
+SF:!DOCTYPE\x20HTML>\n<html\x20lang=\"en\">\n\x20\x20\x20\x20<head>\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20<title>Error\x20response</title>\n\x20\x20\x20\x20</he
+SF:ad>\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20<h1>Error\
+SF:x20response</h1>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Error\x20code:\x20
+SF:400</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Message:\x20Bad\x20request\
+SF:x20version\x20\('RTSP/1\.0'\)\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p
+SF:>Error\x20code\x20explanation:\x20400\x20-\x20Bad\x20request\x20syntax\
+SF:x20or\x20unsupported\x20method\.</p>\n\x20\x20\x20\x20</body>\n</html>\
+SF:n")%r(FourOhFourRequest,184,"HTTP/1\.1\x20404\x20NOT\x20FOUND\r\nServer
+SF::\x20Werkzeug/3\.1\.3\x20Python/3\.13\.5\r\nDate:\x20Sat,\x2015\x20Aug\
+SF:x202026\x2010:45:16\x20GMT\r\nContent-Type:\x20text/html;\x20charset=ut
+SF:f-8\r\nContent-Length:\x20207\r\nConnection:\x20close\r\n\r\n<!doctype\
+SF:x20html>\n<html\x20lang=en>\n<title>404\x20Not\x20Found</title>\n<h1>No
+SF:t\x20Found</h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20found\x20o
+SF:n\x20the\x20server\.\x20If\x20you\x20entered\x20the\x20URL\x20manually\
+SF:x20please\x20check\x20your\x20spelling\x20and\x20try\x20again\.</p>\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 15 16:17:28 2026 -- 1 IP address (1 host up) scanned in 152.36 seconds
