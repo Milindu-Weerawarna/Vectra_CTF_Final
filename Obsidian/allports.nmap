@@ -1,0 +1,9 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 18:21:44 2026 as: nmap -Pn -sS -p- --min-rate 1500 --max-retries 2 -oA allports 168.144.132.223
+Nmap scan report for 168.144.132.223
+Host is up (0.38s latency).
+Not shown: 45010 filtered tcp ports (net-unreach), 20523 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+25/tcp open  smtp
+80/tcp open  http
+
+# Nmap done at Sat Aug 15 18:22:59 2026 -- 1 IP address (1 host up) scanned in 74.93 seconds

@@ -1,0 +1,1 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 17:56:01 2026 as: nmap -sC -sV -oN obsidian_nmap.txt 168.144.132.223

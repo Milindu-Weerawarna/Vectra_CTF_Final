@@ -1,0 +1,10 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 17:59:15 2026 as: nmap -p- --min-rate 5000 -T4 -oN obsidian_ports.txt 168.144.132.223
+Nmap scan report for 168.144.132.223
+Host is up (0.070s latency).
+Not shown: 65532 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+22/tcp open  ssh
+25/tcp open  smtp
+80/tcp open  http
+
+# Nmap done at Sat Aug 15 18:00:13 2026 -- 1 IP address (1 host up) scanned in 58.54 seconds

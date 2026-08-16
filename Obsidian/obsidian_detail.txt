@@ -1,0 +1,21 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 18:00:28 2026 as: nmap -p 22,25,80 -sC -sV -T4 -oN obsidian_detail.txt 168.144.132.223
+Nmap scan report for 168.144.132.223
+Host is up (0.049s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)
+25/tcp open  smtp    Postfix smtpd
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=Obsidian
+| Subject Alternative Name: DNS:Obsidian
+| Not valid before: 2026-08-11T03:35:01
+|_Not valid after:  2036-08-08T03:35:01
+| smtp-commands: Obsidian, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8, NOCHUNKING
+|_ 2.0.0 Commands: AUTH BDAT DATA EHLO ETRN HELO HELP MAIL NOOP QUIT RCPT RSET STARTTLS VRFY XCLIENT XFORWARD
+80/tcp open  http    Apache httpd 2.4.68 ((Debian))
+|_http-server-header: Apache/2.4.68 (Debian)
+|_http-title: Obsidian \xC3\xA2\xC2\x80\xC2\x94 Encryption Services
+Service Info: Host:  Obsidian; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 15 18:01:28 2026 -- 1 IP address (1 host up) scanned in 60.27 seconds
