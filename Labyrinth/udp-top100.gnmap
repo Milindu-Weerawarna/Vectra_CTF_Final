@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Sat Aug 15 17:04:08 2026 as: nmap -Pn -n -sU --top-ports 100 -T3 --max-retries 1 -oA udp-top100 157.230.248.66
+Host: 157.230.248.66 ()	Status: Up
+Host: 157.230.248.66 ()	Ports: 137/open/udp//netbios-ns///	Ignored State: open|filtered (99)
+# Nmap done at Sat Aug 15 17:04:20 2026 -- 1 IP address (1 host up) scanned in 12.06 seconds
